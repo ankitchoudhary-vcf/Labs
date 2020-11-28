@@ -23,12 +23,12 @@ void SellSort(int arr[], int n)
 
 int main()
 {
-    int arr[] = {3,4,6,8,2,11,23};
+    int arr[] = {3,4,6,8,2,11,23,56};
     int n,i;
     n=sizeof(arr)/sizeof(arr[0]);
     SellSort(arr, n-1);
-    printf("Sorted Array\n");
-    for(i=0; i<n; i++)
+    printf("Sorted Array");
+    for(i=0; i<n-1; i++)
     {
         printf("%d ",arr[i]);
     }
