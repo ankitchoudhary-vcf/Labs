@@ -10,7 +10,7 @@ int main()
     try
     {
         throw 20;
-        cout<<"am in Try"<<endl;
+        cout<<"I am in Try"<<endl;
     }
     catch(int e)
     {
