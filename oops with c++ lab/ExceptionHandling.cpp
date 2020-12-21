@@ -4,6 +4,11 @@
 #include<iostream>
 using namespace std;
 
+void fun()
+{
+    throw 100;
+}
+
 int main()
 {
     int i;
@@ -12,15 +17,15 @@ int main()
     try
     {
         if(i==1)
-            throw 20.1;
+            throw 20;
         if(i==2)
-            throw "XYZ";
+            throw 50;
         if(i==3)
-            throw 100;
+            fun();
     }
-    catch(...)
+    catch(int e)
     {
-        cout<<"Exception aya hai so proced with some different value"<<endl;
+        cout<<"Exception no. "<<e<<endl;
     }
 
     return 0;
