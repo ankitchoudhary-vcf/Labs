@@ -26,7 +26,7 @@ class Student
             cout<<"\nBranch of the Student : "<<Branch;
         }
 };
-class Result:public Student
+class Result:public virtual Student
 {
     protected:
         int Marks[5];
@@ -55,7 +55,7 @@ class Result:public Student
             cout<<"\nPercentage of the student : "<<per;
         }
 };
-class Sports:public Student
+class Sports:virtual public Student
 {
     protected:
         char Sport[30];
