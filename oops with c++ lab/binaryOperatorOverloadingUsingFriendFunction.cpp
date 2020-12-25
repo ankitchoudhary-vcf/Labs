@@ -2,7 +2,8 @@
 
 using namespace std;
 
-class A {
+class A
+{
 private:
   int a;
 
@@ -20,12 +21,14 @@ void A ::set_a() { a = 10; }
 void A ::get_a() { cout << a << "\n"; }
 
 // Definition of overloaded unary minus operator - friend function
-A operator-(A ob) {
+A operator-(A ob)
+{
   ob.a = -(ob.a);
   return ob;
 }
 
-int main() {
+int main()
+{
   A ob;
   ob.set_a();
 
