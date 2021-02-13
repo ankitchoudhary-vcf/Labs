@@ -30,8 +30,8 @@ void deleteNode(struct Node **head, struct Node *n)
     }
     else
     {
-        recerseve(*head, n)->next = recerseve(*head, n)->next->next;
-        // free(recerseve(*head, n)->next);
+        recerseve(*head, n)->next = n->next;
+        free(n);
     }
 }
 
