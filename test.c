@@ -30,8 +30,41 @@ void deleteNode(struct Node **head, struct Node *n)
     }
     else
     {
-        recerseve(*head, n)->next = n->next;
-        free(n);
+        // recerseve(*head, n)->next = n->next;
+        // free(n);
+        while (1)
+        {
+            if(n->next != NULL)
+            {
+                if (n->next->next == NULL)
+                {
+                    n->data = n->next->data;
+                    free(n->next);
+                    n->next = NULL;
+                    break;
+                }
+                else
+                {
+                    n->data = n->next->data;
+                    n = n->next;
+                }
+            }
+            else{
+                if(*head == n)
+                {
+                    *head = NULL;
+                    free(n);
+                    break;
+                }
+                else{
+                    recerseve(*head, n)->next = NULL;
+                    free(n);
+                    break;
+                }
+            }
+            
+        }
+        //free(n);
     }
 }
 
@@ -53,7 +86,7 @@ void printList(struct Node *head)
         printf("%d ", head->data);
         head = head->next;
     }
-    printf("\n");
+    // printf("\n");
 }
 
 /* Driver program to test above functions */
@@ -63,11 +96,11 @@ int main()
 
     /* Create following linked list 
       12->15->10->11->5->6->2->3 */
-    push(&head, 3);
-    push(&head, 2);
-    push(&head, 6);
-    push(&head, 5);
-    push(&head, 11);
+    // push(&head, 3);
+    // push(&head, 2);
+    // push(&head, 6);
+    // push(&head, 5);
+    // push(&head, 11);
     push(&head, 10);
     push(&head, 15);
     push(&head, 12);
