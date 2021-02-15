@@ -96,11 +96,11 @@ int main()
 
     /* Create following linked list 
       12->15->10->11->5->6->2->3 */
-    // push(&head, 3);
-    // push(&head, 2);
-    // push(&head, 6);
-    // push(&head, 5);
-    // push(&head, 11);
+    push(&head, 3);
+    push(&head, 2);
+    push(&head, 6);
+    push(&head, 5);
+    push(&head, 11);
     push(&head, 10);
     push(&head, 15);
     push(&head, 12);
