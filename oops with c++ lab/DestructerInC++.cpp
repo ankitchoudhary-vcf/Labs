@@ -23,5 +23,8 @@ class Demo {
 int main() {
    Demo obj1(10, 20);
    obj1.display();
+   obj1.display();
+   cout << "something"<<endl;
+   obj1.display();
    return 0;
 }

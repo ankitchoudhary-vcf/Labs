@@ -4,7 +4,7 @@ using namespace std;
 class Demo
 {
     public:
-    int data;
+   int data;
     Demo()
     {
         data = 10;
@@ -13,15 +13,18 @@ class Demo
     void show(){
         cout << "data is : " << data<<endl;
     }
-    void operator delete(void *p){
+    // void operator delete(void *p){
+    //     cout << "delete" << endl;
+    //     free(p);
+    // }
+    ~Demo()
+    {
         cout << "destructed" << endl;
-        free(p);
     }
 };
 
 int main()
 {
     Demo *d = new Demo;
-    d->show();
     delete d;
 }

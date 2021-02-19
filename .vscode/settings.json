@@ -1,4 +1,7 @@
 {
     "C_Cpp.errorSquiggles": "Disabled",
-    "git.autofetch": true
+    "git.autofetch": true,
+    "files.associations": {
+        "new": "cpp"
+    }
 }
