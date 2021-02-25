@@ -19,7 +19,7 @@ public:
     {
         cout << "Charkha used => " << charkha << endl;
     }
-    static void see() //Static Member function.
+    static void see() //Static Member function.+
     {
         cout << "Charkha used => " << charkha << endl;
     }
